@@ -32,8 +32,8 @@
  */
 
 const sortProducts = (array) => {
-    let sorted = array.sort((a,b) => a.price > b.price || -1)
-    return sorted.filter(item => item.price > 24)
+    let sorted = array.sort((a,b) => a.price - b.price)
+    return sorted.filter(item => item.price >= 25)
 }
 
 const getProducts = async (url = '') => {
